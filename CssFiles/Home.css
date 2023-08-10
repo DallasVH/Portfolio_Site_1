@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+*	{margin:0; padding:0;}
+
+@media screen and (min-width: 1200px) {
+    .menu {
+        clear: left;
+        float: left;
+    }
+    .menu li {margin: 0 0.5em 0 0;}
+    .menu{
+        width: 57%;
+        margin-left: 25%;
+    }
+    #content-secondary {width: 20%;}
+    .menu li {
+        float: none;
+        margin: 0;
+    }
+    .menu a {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0;
+    }
+}
+    
+@media screen and (min-width: 2500px) {
+    .menu {
+        clear: left;
+        float: left;
+    }
+    .menu li {margin: 0 0.5em 0 0;}
+    #content-main{
+        width: 57%;
+        margin-left: 18%;
+    }
+    #content-secondary {width: 20%;}
+    .menu li {
+        float: none;
+        margin: 0;
+    }
+    .menu a {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .menu {
+        clear: left;
+        float: left;
+    }
+    .menu li {margin: 0 0.5em 0 0;}
+    
+    h1 + p {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        -ms-column-count: 1;
+        column-count: 1;
+    }
+    .feature {
+        float: none;
+        width: auto;
+        margin: 0 0 1.6em 0;
+        padding: 0 0 0 140px;
+        background-position: top left;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #content-main, #content-secondary{
+        float: none;
+        width: 100%;
+    }
+    .menu {
+        width: 100%;
+        text-align: center;
+    }
+    .menu li {float: none;}
+    .menu ul li a {padding: 0.5em 0;}
+    h1 {font-size: 225%;}
+    h1 + p {font-size: 100%;}
+    #feature-candy {background-image: url(images/Arabic_Coffee_64.jpg);}
+    #feature-pastry {background-image: url(images/Maple_Syrup_Coffee_64.jpg);}
+    .menu ul li {
+        float: none;
+        width: 100%;
+    }
+}
+
+/*-------------------------------------------------------------------------------*/
+
+p, h1, h2, h3, h4, h5, h6 {margin-bottom: 1em;}
+
+p
+{
+	font: small/1.6em Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #FFF;
+}
+
+#wrapper
+{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	border: 0px solid #FFF;
+}
+
+footer {
+    background-color: #ddd;
+    clear: both;
+    text-align: center;
+}
+#banner
+{
+	width: 100%;
+	height: 108px;
+	background: cornflowerblue;
+	border: 2px solid #000;
+    border-top: 6px solid #000;
+	border-right: 0px solid #000;
+	border-bottom: 6px solid #000;
+	border-left: 0px solid #000;
+}
+
+#content-main {
+    float: right;
+	width: 40%;
+	margin-bottom: 40px;
+}
+
+#content-secondary {
+	overflow: hidden;
+	float: left;
+	width: 50%;
+	margin-bottom: 40px;
+}
+
+aside {
+    float: right;
+    width: 20%;
+    padding: 0 1%;
+}
+
+h1{
+    margin-top: 5%;
+}
+
+h2{
+    font-size: 150%;
+}
+
+h3{
+    font-size: 250%;
+    margin-left: 35%;
+    margin-top: 1%;
+}
+
+p2{
+    font-size: 120%
+}
+
+.profile {
+	background: transparent url(Images/Dallas.jpeg) top left no-repeat; 
+	position: relative; 
+	top: 1%; 
+	left: 2%; 
+    bottom: 1%;
+	width: 579px; 
+	height: 654px;
+}
+
+/*Button Menu System*/
+
+.menu {
+	font:1em helvetica, arial, sans-serif;
+	} 
+.menu a {
+	color: lightblue; 							
+	background-color:black; 				
+	padding:.2em 3em;						
+	border-width:2px; 						
+	border-color:transparent; 
+	}  					
+.menu a:hover {
+	color:white;
+	background-color:blue;
+	}
+.menu li a:active {
+	background: darkblue;
+	color:lightgray;
+	background-clip:padding-box;
+	}	
+.menu li ul {width:9em;}
+.menu li li a {   
+	border-right-style:none;				
+	border-top-style:solid;					
+	}
+.menu li li li a {   
+	border-left-style:solid;
+}
+
+/* Main Menu Mechanics */
+
+.menu * {margin: middle; padding:0;}
+.menu ul {float: left;}
+.menu li {  
+	float: left;
+	list-style-type:none;
+	position:relative;
+}
+.menu li a {   
+	display:block;
+	border-right-style:solid;
+	background-clip:padding-box;
+	text-decoration:none;
+}
+.menu li:last-child a {   
+	border-right-style:none;
+}
+
+/* Second Drop Menu Settings*/
+
+.menu li ul {
+	display:none;
+	position:absolute;
+	left:0; 
+	top:100%;
+}
+.menu li:hover > ul {
+	display:block;
+}
+.menu li li {
+	position:relative;
+	float:none;
+}
+
+/*Text Tooltips*/
+
+a.tooltip {position: absolute;}
+a.tooltip span {display: none;}
+a.tooltip:hover span {
+     display: block;
+     position: absolute;
+     top: 1.5em;
+     left: 0em;
+     font-size: 0.8em;
+     width: 10em;
+     padding: 0 1em;
+     background-color: #333;
+     z-index: 10;
+     color: white;
+}
+
+/*Animation*/
+
+.anim {
+	animation-name: slide;
+	animation-duration: 3s;
+	animation-timing-function: cubic-bezier(.41,.07,.62,.91) ;
+	animation-fill-mode:forwards;
+	animation-direction: alternate;
+	animation-iteration-count: 26; 
+	position: fixed; 
+	top: 1%; 
+	right: 1%; 
+}
+
+@keyframes slide {
+	0%{transform: translateX(0);}
+	20% {transform:translateX(-90%);}
+	35% {transform:translateX(0);}
+	90% {transform: translateX(-360%);}
+	100% {transform: translateX(-400%);}
+
+}
